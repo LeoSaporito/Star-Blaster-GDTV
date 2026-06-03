@@ -288,9 +288,8 @@ MonoBehaviour:
   waveConfigs:
   - {fileID: 11400000, guid: 6c0c952c2abf419419942ad74eb0fe8b, type: 2}
   - {fileID: 11400000, guid: 369f5883c5561e142858b234c0139ea7, type: 2}
-  - {fileID: 11400000, guid: 6c0c952c2abf419419942ad74eb0fe8b, type: 2}
-  - {fileID: 11400000, guid: 369f5883c5561e142858b234c0139ea7, type: 2}
-  timeBetweenWaves: 2
+  timeBetweenWaves: 0
+  isLooping: 1
 --- !u!4 &908341194
 Transform:
   m_ObjectHideFlags: 0
@@ -314,22 +313,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2678324936386724151, guid: 53858f285e7b1fc4abc46a09a5dd30ca, type: 3}
-      propertyPath: topBoundPadding
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 2678324936386724151, guid: 53858f285e7b1fc4abc46a09a5dd30ca, type: 3}
-      propertyPath: leftBoundPadding
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2678324936386724151, guid: 53858f285e7b1fc4abc46a09a5dd30ca, type: 3}
-      propertyPath: rightBoundPadding
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2678324936386724151, guid: 53858f285e7b1fc4abc46a09a5dd30ca, type: 3}
-      propertyPath: bottomBoundPadding
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4303681770033761716, guid: 53858f285e7b1fc4abc46a09a5dd30ca, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

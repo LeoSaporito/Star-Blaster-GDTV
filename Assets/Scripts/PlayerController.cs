@@ -38,6 +38,7 @@ public class PlayerController : MonoBehaviour
     void MovePlayer()
     {
         moveVector = moveAction.ReadValue<Vector2>();
+        Debug.Log(moveVector);
 
         Vector3 newPos = transform.position + moveVector * moveSpeed * Time.deltaTime;
 
