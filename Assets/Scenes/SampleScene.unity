@@ -236,6 +236,7 @@ GameObject:
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
   - component: {fileID: 519420030}
+  - component: {fileID: 519420033}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -361,6 +362,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &519420033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c8eddd5c45402942bf15e536f4825e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CameraShake
+  shakeDuration: 0.3
+  shakeMagnitude: 0.2
 --- !u!1 &759435732
 GameObject:
   m_ObjectHideFlags: 0
@@ -595,6 +610,10 @@ PrefabInstance:
     - target: {fileID: 4303681770033761716, guid: 53858f285e7b1fc4abc46a09a5dd30ca, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6037679241496525838, guid: 53858f285e7b1fc4abc46a09a5dd30ca, type: 3}
+      propertyPath: applyCameraShake
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7309369798446820588, guid: 53858f285e7b1fc4abc46a09a5dd30ca, type: 3}
       propertyPath: m_Name
