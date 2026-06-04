@@ -13,8 +13,8 @@ public class PlayerController : MonoBehaviour
 
     InputAction moveAction;
     InputAction fireAction;
-    Vector3 moveVector;
 
+    Vector3 moveVector;
     Vector2 minBounds;
     Vector2 maxBounds;
     void Start()
