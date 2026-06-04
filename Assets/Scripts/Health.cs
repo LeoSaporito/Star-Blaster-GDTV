@@ -13,17 +13,20 @@ public class Health : MonoBehaviour
     CameraShake cameraShake;
     AudioManager audioManager;
     ScoreKeeper scoreKeeper;
+    LevelManager levelManager;
 
+    int playerHealth;
 
     private void Start()
     {
         cameraShake = Camera.main.GetComponent<CameraShake>();
-        audioManager = FindFirstObjectByType<AudioManager>();
+        audioManager = FindAnyObjectByType<AudioManager>();
         scoreKeeper = FindFirstObjectByType<ScoreKeeper>();
+        levelManager = FindFirstObjectByType<LevelManager>();
     }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
-
         //check if we hit a damage dealer
         DamageDealer damageDealer = collision.GetComponent<DamageDealer>();
 
@@ -32,6 +35,7 @@ public class Health : MonoBehaviour
             TakeDamage(damageDealer.GetDamage());
             PlayHitParticles();
             damageDealer.Hit();
+            audioManager.PlayDamageClip();
 
             if (applyCameraShake)
             { 
@@ -52,13 +56,16 @@ public class Health : MonoBehaviour
 
     private void Die()
     {
-        Destroy(gameObject);
-        audioManager.PlayDamageClip();
-
-        if (!isPlayer)
+        if (isPlayer)
+        { 
+            levelManager.LoadGameOver();
+        }
+        else
         {
             scoreKeeper.AddToScore(addToScore);
         }        
+        
+        Destroy(gameObject);
     }
 
     void PlayHitParticles()
@@ -69,5 +76,9 @@ public class Health : MonoBehaviour
 
             Destroy(particles, particles.main.duration + particles.main.startLifetime.constantMax);
         }
+    }
+    public int GetHealth()
+    {
+        return health;
     }
 }

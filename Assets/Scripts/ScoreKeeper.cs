@@ -1,16 +1,8 @@
-using TMPro;
 using UnityEngine;
 
 public class ScoreKeeper : MonoBehaviour
 {
-    [SerializeField] TextMeshProUGUI scoreText;
-    
     int score;
-
-    private void Update()
-    {
-        scoreText.text = "Score: " + score;
-    }
 
     public int GetCurrentScore()
     {
