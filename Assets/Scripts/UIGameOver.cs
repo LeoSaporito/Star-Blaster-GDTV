@@ -13,6 +13,6 @@ public class UIGameOver : MonoBehaviour
     }
     void Start()
     {
-        scoreText.text = scoreKeeper.GetCurrentScore().ToString();
+        scoreText.text = "Final Score:\n" + scoreKeeper.GetCurrentScore();
     }
 }
